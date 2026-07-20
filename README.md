@@ -199,7 +199,7 @@ FreshKeep/
 │   │   │   ├── anim/                          # slide-up, fade-scale, bounce animations
 │   │   │   └── mipmap-*/                      # launcher icons
 │   │   └── AndroidManifest.xml
-│   ├── google-services.json                   # NOT committed — see Build Instructions
+│   ├── google-services.json                   # gitignored — supply your own, see Build Instructions
 │   └── build.gradle.kts
 ├── assets/                                    # original brand assets (logo PNG/SVG)
 ├── ui_kits/freshkeep-app/                     # original web prototype (reference)
@@ -510,6 +510,14 @@ Everything below is transcribed 1:1 from `tokens/` into `res/values`:
 4. **Configure Firebase Authentication** (required for Google Sign-In — see below).
 5. Select a device/emulator and press **Run ▶** (or `Shift+F10`).
 
+> ### ⚠️ `app/google-services.json` is not in this repository
+>
+> It is listed in `.gitignore` and deliberately excluded, because it contains **project-specific Firebase identifiers** (`api_key`, `project_id`, `mobilesdk_app_id`) tied to one Firebase project and one set of signing-certificate fingerprints. A committed copy would be useless to you anyway — your debug keystore's SHA-1 will not match it, and Google Sign-In would fail with **status code 10 (`DEVELOPER_ERROR`)**.
+>
+> **Every developer must generate their own** by following [Firebase setup](#firebase-setup-google-sign-in-only) below, then place it at `app/google-services.json`.
+>
+> **You do not need it to build or run the app.** The `google-services` plugin is applied conditionally, so the project compiles and installs without the file — only the "Continue with Google" button is disabled. **Continue as Guest exercises the entire app** (inventory, shopping, analytics, reminders, all of it) with zero configuration.
+
 > The database is created and seeded per user profile on first sign-in. **Continue as Guest works with no configuration at all** — the Firebase setup below is only needed for the Google Sign-In button.
 
 ### Firebase setup (Google Sign-In only)
@@ -527,7 +535,7 @@ Google requires every app using Google Sign-In to be registered with its package
 5. Download `google-services.json` and place it at **`app/google-services.json`** (next to `app/build.gradle.kts`, not inside `src/`).
 6. Rebuild. The `google-services` plugin is applied **conditionally**, so the project still compiles before this file exists; the Google button simply reports that it is not configured.
 
-> `google-services.json` contains project-specific identifiers and is **not committed** — each developer supplies their own.
+> **Never commit your `google-services.json`.** It is already covered by `.gitignore`, so it stays untracked automatically — do not force-add it with `git add -f`. If you ever do commit one by mistake, treat the Firebase project as exposed: rotate/restrict the API key in the Google Cloud console and verify your Firebase Security Rules, since GitHub caches and indexes content even after a file is deleted.
 
 ---
 
@@ -574,7 +582,8 @@ Google requires every app using Google Sign-In to be registered with its package
 3. Tag releases: `v1.0.0`, `v1.1.0`, …
 
 ### Repository hygiene
-- `.gitignore` — `build/`, `.gradle/`, `local.properties`, `*.keystore`, `.idea/` (machine-specific files)
+- `.gitignore` — `build/`, `.gradle/`, `local.properties`, `*.keystore`, `.idea/` (machine-specific files) and **`google-services.json`** (per-developer Firebase config — see [Build Instructions](#-build-instructions))
+- `.gitattributes` — normalizes all text files to LF in the repo; keeps `*.bat` CRLF and `gradlew`/`*.sh` LF
 - `README.md` — this document
 - Web prototype (`ui_kits/`, `components/`, `tokens/`, `assets/`) kept in-repo as the pixel-reference for the conversion
 - GitHub Releases — attach the signed APK per version
