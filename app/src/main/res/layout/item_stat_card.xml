@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Home hero StatCardButton — rgba(255,255,255,.16) tile, icon/value/label -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@drawable/ripple_stat_card"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingStart="12dp"
+    android:paddingTop="14dp"
+    android:paddingEnd="12dp"
+    android:paddingBottom="14dp">
+
+    <com.freshkeep.app.views.IconView
+        android:id="@+id/statIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="inventory_2"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/statValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/baloo2_extrabold"
+        android:text="0 Items"
+        android:textColor="#FFF3C4"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/statLabel"
+        style="@style/Text.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="In Stock"
+        android:textColor="#D9FFFFFF" />
+</LinearLayout>

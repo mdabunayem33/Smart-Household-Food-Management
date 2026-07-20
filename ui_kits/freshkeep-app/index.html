@@ -1,0 +1,56 @@
+<!-- @dsCard group="FreshKeep App" viewport="412x892" name="App Walkthrough" subtitle="Splash → onboarding → login → full tab flow" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FreshKeep — UI Kit</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<script src="food-illustrations.js"></script>
+<script src="expiry-utils.js"></script>
+<style>
+  html, body { margin: 0; background: var(--gray-200); font-family: var(--font-body); }
+  #root { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 40px 20px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<template id="__bundler_thumbnail" data-bg-color="#4CAF50">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#4CAF50"/>
+    <rect x="470" y="250" width="260" height="260" rx="64" fill="rgba(255,255,255,0.18)"/>
+    <path d="M600 320c-40 0-70 28-70 74 0 54 44 96 70 112 26-16 70-58 70-112 0-46-30-74-70-74z" fill="#ffffff"/>
+    <path d="M600 300c8 20 4 40-6 52-10-16-8-38 6-52z" fill="#E8F5E9"/>
+  </svg>
+</template>
+
+<script type="text/babel" src="screens/RangeControls.jsx"></script>
+<script type="text/babel" src="android-frame.jsx"></script>
+<script type="text/babel" src="screens/Splash.jsx"></script>
+<script type="text/babel" src="screens/Onboarding.jsx"></script>
+<script type="text/babel" src="screens/Login.jsx"></script>
+<script type="text/babel" src="screens/Home.jsx"></script>
+<script type="text/babel" src="screens/EatFirst.jsx"></script>
+<script type="text/babel" src="screens/AddFood.jsx"></script>
+<script type="text/babel" src="screens/Inventory.jsx"></script>
+<script type="text/babel" src="screens/AdjustQuantity.jsx"></script>
+<script type="text/babel" src="screens/EditProduct.jsx"></script>
+<script type="text/babel" src="screens/FoodDetail.jsx"></script>
+<script type="text/babel" src="screens/Shopping.jsx"></script>
+<script type="text/babel" src="screens/Analytics.jsx"></script>
+<script type="text/babel" src="screens/Profile.jsx"></script>
+<script type="text/babel" src="screens/ReminderPreferences.jsx"></script>
+<script type="text/babel" src="screens/LanguagePage.jsx"></script>
+<script type="text/babel" src="screens/UserManual.jsx"></script>
+<script type="text/babel" src="screens/AboutApp.jsx"></script>
+<script type="text/babel" src="screens/PrivacyPolicy.jsx"></script>
+<script type="text/babel" src="screens/TermsConditions.jsx"></script>
+<script type="text/babel" src="App.jsx"></script>
+</body>
+</html>

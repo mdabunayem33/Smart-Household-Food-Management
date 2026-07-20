@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ============================================================
+     COLOR TOKENS — transcribed 1:1 from tokens/colors.css
+     oklch-derived ramp values converted to sRGB hex.
+     ============================================================ -->
+<resources>
+    <!-- Brand base -->
+    <color name="green_500">#4CAF50</color>
+    <color name="green_50">#E8F5E9</color>
+    <color name="orange_500">#FFA726</color>
+    <color name="red_500">#EF5350</color>
+    <color name="blue_500">#42A5F5</color>
+
+    <!-- Derived ramps (oklch anchored to base hues) -->
+    <color name="green_100">#D6F0D5</color>
+    <color name="green_200">#ADE1AC</color>
+    <color name="green_300">#80C580</color>
+    <color name="green_400">#5FAE60</color>
+    <color name="green_600">#2C7C31</color>
+    <color name="green_700">#1A5C1F</color>
+    <color name="green_800">#0D3E11</color>
+
+    <color name="orange_100">#FEE3C5</color>
+    <color name="orange_600">#C27000</color>
+    <color name="orange_700">#945000</color>
+
+    <color name="red_100">#FFDAD6</color>
+    <color name="red_600">#C53637</color>
+    <color name="red_700">#9B1E22</color>
+
+    <color name="blue_100">#D0E8FE</color>
+    <color name="blue_600">#0076C3</color>
+    <color name="blue_700">#005898</color>
+
+    <!-- Neutrals -->
+    <color name="white">#FFFFFF</color>
+    <color name="gray_25">#FAFBFA</color>
+    <color name="gray_50">#F5F7F6</color>
+    <color name="gray_100">#EEF1EF</color>
+    <color name="gray_200">#E2E6E3</color>
+    <color name="gray_300">#C9D0CA</color>
+    <color name="gray_400">#A2ACA4</color>
+    <color name="gray_500">#78847C</color>
+    <color name="gray_600">#576057</color>
+    <color name="gray_700">#3D453F</color>
+    <color name="gray_800">#262B27</color>
+    <color name="gray_900">#14170F</color>
+
+    <!-- Semantic aliases (light) -->
+    <color name="color_bg">@color/white</color>
+    <color name="color_bg_section">@color/gray_50</color>
+    <color name="color_bg_elevated">@color/white</color>
+
+    <color name="color_text_primary">@color/gray_900</color>
+    <color name="color_text_secondary">@color/gray_600</color>
+    <color name="color_text_tertiary">@color/gray_400</color>
+    <color name="color_text_inverse">@color/white</color>
+    <color name="color_text_on_brand">@color/white</color>
+
+    <color name="color_primary">@color/green_500</color>
+    <color name="color_primary_hover">@color/green_600</color>
+    <color name="color_primary_press">@color/green_700</color>
+    <color name="color_primary_surface">@color/green_50</color>
+    <color name="color_primary_surface_strong">@color/green_100</color>
+    <color name="color_primary_border">@color/green_200</color>
+
+    <color name="color_accent_orange">@color/orange_500</color>
+    <color name="color_accent_orange_surface">@color/orange_100</color>
+    <color name="color_accent_red">@color/red_500</color>
+    <color name="color_accent_red_surface">@color/red_100</color>
+    <color name="color_accent_blue">@color/blue_500</color>
+    <color name="color_accent_blue_surface">@color/blue_100</color>
+
+    <!-- Freshness semantics -->
+    <color name="color_fresh">@color/green_500</color>
+    <color name="color_fresh_surface">@color/green_50</color>
+    <color name="color_aging">#FFD54F</color>
+    <color name="color_aging_surface">#FFF8E1</color>
+    <color name="color_soon">@color/orange_500</color>
+    <color name="color_soon_surface">@color/orange_100</color>
+    <color name="color_expired">@color/red_500</color>
+    <color name="color_expired_surface">@color/red_100</color>
+
+    <color name="color_success">@color/green_500</color>
+    <color name="color_warning">@color/orange_500</color>
+    <color name="color_danger">@color/red_500</color>
+    <color name="color_info">@color/blue_500</color>
+
+    <color name="color_border">@color/gray_200</color>
+    <color name="color_border_strong">@color/gray_300</color>
+    <color name="color_divider">@color/gray_100</color>
+
+    <!-- oklch(0.15 0.02 150 / 0.45) -->
+    <color name="color_overlay_scrim">#73060E07</color>
+    <color name="color_focus_ring">@color/blue_500</color>
+
+    <!-- Elevation shadow tints (hsl(150 15% 25%) base, brand glows) -->
+    <color name="shadow_color">#364940</color>
+    <color name="shadow_primary">#59439546</color>
+    <color name="shadow_orange">#52CC7900</color>
+
+    <!-- Food detail sheet action buttons (fixed brand colors, both themes) -->
+    <color name="sheet_btn_consume_bg">#4CAF50</color>
+    <color name="sheet_btn_adjust_bg">#E8F5E9</color>
+    <color name="sheet_btn_adjust_text">#2E7D32</color>
+    <color name="sheet_btn_discard_bg">#EF5350</color>
+
+    <!-- Launcher -->
+    <color name="ic_launcher_background">@color/white</color>
+</resources>

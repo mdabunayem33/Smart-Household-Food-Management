@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- OnboardingScene "reminders": phone with freshness notification cards + bell -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="220dp" android:height="220dp"
+    android:viewportWidth="220" android:viewportHeight="220">
+    <path android:pathData="M10,110 a100,100 0 1,0 200,0 a100,100 0 1,0 -200,0">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear"
+                android:startX="10" android:startY="10" android:endX="210" android:endY="210"
+                android:startColor="#FFF3E0" android:endColor="#FFE0B2" />
+        </aapt:attr>
+    </path>
+    <!-- phone -->
+    <path android:pathData="M86,46 l48,0 a20,20 0 0,1 20,20 l0,100 a20,20 0 0,1 -20,20 l-48,0 a20,20 0 0,1 -20,-20 l0,-100 a20,20 0 0,1 20,-20 Z"
+        android:strokeColor="#FFE0B2" android:strokeWidth="2">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear"
+                android:startX="66" android:startY="46" android:endX="154" android:endY="186"
+                android:startColor="#FFFFFF" android:endColor="#FFF8F0" />
+        </aapt:attr>
+    </path>
+    <path android:pathData="M83,60 l54,0 a5,5 0 0,1 5,5 a5,5 0 0,1 -5,5 l-54,0 a5,5 0 0,1 -5,-5 a5,5 0 0,1 5,-5 Z" android:fillColor="#FB8C00" />
+    <!-- fresh card -->
+    <path android:pathData="M86,82 l48,0 a10,10 0 0,1 10,10 l0,4 a10,10 0 0,1 -10,10 l-48,0 a10,10 0 0,1 -10,-10 l0,-4 a10,10 0 0,1 10,-10 Z" android:fillColor="#E8F5E9" />
+    <path android:pathData="M84,94 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0" android:fillColor="#4CAF50" />
+    <path android:pathData="M106,90 l26,0 a4,4 0 0,1 4,4 a4,4 0 0,1 -4,4 l-26,0 a4,4 0 0,1 -4,-4 a4,4 0 0,1 4,-4 Z" android:fillColor="#A5D6A7" />
+    <!-- aging card -->
+    <path android:pathData="M86,112 l48,0 a10,10 0 0,1 10,10 l0,4 a10,10 0 0,1 -10,10 l-48,0 a10,10 0 0,1 -10,-10 l0,-4 a10,10 0 0,1 10,-10 Z" android:fillColor="#FFF8E1" />
+    <path android:pathData="M84,124 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0" android:fillColor="#FDD835" />
+    <path android:pathData="M106,120 l26,0 a4,4 0 0,1 4,4 a4,4 0 0,1 -4,4 l-26,0 a4,4 0 0,1 -4,-4 a4,4 0 0,1 4,-4 Z" android:fillColor="#FFECB3" />
+    <!-- expired card -->
+    <path android:pathData="M86,142 l48,0 a10,10 0 0,1 10,10 l0,4 a10,10 0 0,1 -10,10 l-48,0 a10,10 0 0,1 -10,-10 l0,-4 a10,10 0 0,1 10,-10 Z" android:fillColor="#FFEBEE" />
+    <path android:pathData="M84,154 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0" android:fillColor="#EF5350" />
+    <path android:pathData="M106,150 l26,0 a4,4 0 0,1 4,4 a4,4 0 0,1 -4,4 l-26,0 a4,4 0 0,1 -4,-4 a4,4 0 0,1 4,-4 Z" android:fillColor="#EF9A9A" />
+    <!-- bell -->
+    <path android:pathData="M150,70 a18,18 0 1,0 36,0 a18,18 0 1,0 -36,0" android:fillColor="#FFA726" />
+    <path android:pathData="M168,62c-5,0 -8,4 -8,9v5l-3,4h22l-3,-4v-5c0,-5 -3,-9 -8,-9Z" android:fillColor="#ffffff" />
+    <path android:pathData="M165.5,82 a2.5,2.5 0 1,0 5,0 a2.5,2.5 0 1,0 -5,0" android:fillColor="#ffffff" />
+</vector>

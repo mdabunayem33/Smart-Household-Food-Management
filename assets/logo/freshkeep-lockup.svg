@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 96" fill="none">
+  <rect width="96" height="96" rx="24" fill="#4CAF50"></rect>
+  <rect x="32" y="27" width="7.5" height="27" rx="3.75" fill="#FFFFFF"></rect>
+  <rect x="44.25" y="21" width="7.5" height="33" rx="3.75" fill="#FFFFFF"></rect>
+  <rect x="56.5" y="27" width="7.5" height="27" rx="3.75" fill="#FFFFFF"></rect>
+  <rect x="38.5" y="51" width="19" height="16" rx="5.5" fill="#FFFFFF"></rect>
+  <ellipse cx="48" cy="74" rx="28" ry="7" fill="#FFFFFF" fill-opacity="0.92"></ellipse>
+  <path d="M59 32c6.4-3.2 12.8 0 14.4 6.4-6.4 1.6-12.8-.8-14.4-6.4Z" fill="#C8E6C9"></path>
+  <text x="118" y="60" font-family="Baloo 2, sans-serif" font-weight="700" font-size="40" fill="#14170F">FreshKeep</text>
+</svg>

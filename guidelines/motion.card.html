@@ -1,0 +1,14 @@
+<!-- @dsCard group="Brand" viewport="700x140" name="Motion Easings" subtitle="Standard, soft-out, bounce — press/selection feedback" -->
+<!DOCTYPE html>
+<html><head><link rel="stylesheet" href="../../styles.css">
+<style>
+body{margin:0;padding:20px;background:var(--color-bg);display:flex;gap:24px;}
+.track{width:180px;height:60px;position:relative;background:var(--color-bg-section);border-radius:var(--radius-md);}
+.dot{position:absolute;top:10px;left:10px;width:40px;height:40px;border-radius:50%;background:var(--color-primary);}
+</style></head>
+<body>
+  <div class="track"><div class="dot" style="animation:mv 1.6s var(--ease-standard) infinite alternate"></div></div>
+  <div class="track"><div class="dot" style="animation:mv 1.6s var(--ease-out-soft) infinite alternate"></div></div>
+  <div class="track"><div class="dot" style="animation:mv 1.6s var(--ease-bounce) infinite alternate"></div></div>
+  <style>@keyframes mv{to{transform:translateX(130px)}}</style>
+</body></html>

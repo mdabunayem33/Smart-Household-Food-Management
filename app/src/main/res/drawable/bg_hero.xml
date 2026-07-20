@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Home hero: primary green, bottom corners radius-xl (32) -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/color_primary" />
+    <corners
+        android:topLeftRadius="0dp"
+        android:topRightRadius="0dp"
+        android:bottomLeftRadius="@dimen/radius_xl"
+        android:bottomRightRadius="@dimen/radius_xl" />
+</shape>

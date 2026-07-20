@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- InventoryItemCard — edit/delete buttons top-right, tile + name/qty + expiry bar -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card_lg"
+    android:elevation="2dp">
+
+    <LinearLayout
+        android:id="@+id/invCardBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:paddingEnd="100dp">
+
+        <FrameLayout
+            android:id="@+id/invTile"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_tile_md">
+
+            <ImageView
+                android:id="@+id/invIllustration"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:importantForAccessibility="no"
+                android:padding="8dp"
+                android:src="@drawable/ill_others" />
+
+            <com.freshkeep.app.views.IconView
+                android:id="@+id/invIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="category"
+                android:textColor="@color/color_text_primary"
+                android:textSize="28dp"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingEnd="68dp">
+
+                <TextView
+                    android:id="@+id/invName"
+                    style="@style/Text.H3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Tomato"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/invQty"
+                    style="@style/Text.BodySm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="6 pcs"
+                    android:textColor="@color/color_text_secondary" />
+            </LinearLayout>
+
+            <com.freshkeep.app.views.FreshnessBarView
+                android:id="@+id/invProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/invProgressLabel"
+                style="@style/Text.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Expires in 2 days"
+                android:textColor="@color/color_text_tertiary" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/btnEdit"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/circle_section"
+            android:clickable="true"
+            android:focusable="true">
+
+            <com.freshkeep.app.views.IconView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="edit"
+                android:textColor="@color/color_text_secondary"
+                android:textSize="17dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btnDelete"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="6dp"
+            android:background="@drawable/circle_red_surface"
+            android:clickable="true"
+            android:focusable="true">
+
+            <com.freshkeep.app.views.IconView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="delete"
+                android:textColor="@color/red_700"
+                android:textSize="17dp" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

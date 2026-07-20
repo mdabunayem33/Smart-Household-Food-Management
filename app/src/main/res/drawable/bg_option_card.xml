@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ShoppingSetup option: 2dp border, elevated bg, radius-lg -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/color_bg_elevated" />
+    <stroke android:width="2dp" android:color="@color/color_border" />
+    <corners android:radius="@dimen/radius_lg" />
+</shape>

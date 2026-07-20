@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.freshkeep.app.views.SquareFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_dashed_tile"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.freshkeep.app.views.IconView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="add"
+            android:textColor="@color/color_text_secondary"
+            android:textSize="32dp" />
+
+        <TextView
+            android:id="@+id/addTileLabel"
+            style="@style/Text.H3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:text="Custom Category"
+            android:textColor="@color/color_text_secondary"
+            android:textSize="14sp" />
+    </LinearLayout>
+</com.freshkeep.app.views.SquareFrameLayout>

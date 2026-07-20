@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPACING / RADII / SIZES — transcribed 1:1 from tokens/spacing.css -->
+<resources>
+    <dimen name="space_1">4dp</dimen>
+    <dimen name="space_2">8dp</dimen>
+    <dimen name="space_3">12dp</dimen>
+    <dimen name="space_4">16dp</dimen>
+    <dimen name="space_5">20dp</dimen>
+    <dimen name="space_6">24dp</dimen>
+    <dimen name="space_7">32dp</dimen>
+    <dimen name="space_8">40dp</dimen>
+    <dimen name="space_9">48dp</dimen>
+    <dimen name="space_10">64dp</dimen>
+    <dimen name="space_11">80dp</dimen>
+
+    <dimen name="screen_margin">24dp</dimen>
+
+    <dimen name="radius_sm">12dp</dimen>
+    <dimen name="radius_md">18dp</dimen>
+    <dimen name="radius_lg">24dp</dimen>
+    <dimen name="radius_xl">32dp</dimen>
+    <dimen name="radius_pill">999dp</dimen>
+
+    <dimen name="touch_target_min">48dp</dimen>
+    <dimen name="touch_target_lg">64dp</dimen>
+
+    <dimen name="icon_sm">20dp</dimen>
+    <dimen name="icon_md">24dp</dimen>
+    <dimen name="icon_lg">32dp</dimen>
+    <dimen name="icon_xl">48dp</dimen>
+
+    <dimen name="nav_bar_height">72dp</dimen>
+    <dimen name="fab_size">64dp</dimen>
+</resources>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1280px; height: 854px; overflow: hidden; }
+  body { display: flex; font-family: var(--font-display); }
+  .main {
+    flex: 1;
+    background: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .wordmark {
+    color: var(--color-text-on-brand);
+    font-weight: 800;
+    font-size: 132px;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    text-align: center;
+  }
+  .swatches {
+    width: 160px;
+    height: 854px;
+    display: flex;
+    flex-direction: column;
+  }
+  .swatches div { flex: 1; }
+</style>
+</head>
+<body>
+  <div class="main"><div class="wordmark">FreshKeep</div></div>
+  <div class="swatches">
+    <div style="background: var(--green-100)"></div>
+    <div style="background: var(--orange-500)"></div>
+    <div style="background: var(--blue-500)"></div>
+    <div style="background: var(--green-700)"></div>
+  </div>
+</body>
+</html>

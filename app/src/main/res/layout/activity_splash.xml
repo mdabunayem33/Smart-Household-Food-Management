@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Splash.jsx — white bg, ambient green radials, deco food illustrations,
+     floating logo 215dp, app title + tagline -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- soft green ambient accents -->
+    <View
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_gravity="top|start"
+        android:layout_marginStart="-90dp"
+        android:layout_marginTop="-100dp"
+        android:background="@drawable/bg_radial_green" />
+
+    <View
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="-70dp"
+        android:layout_marginBottom="-110dp"
+        android:background="@drawable/bg_radial_green" />
+
+    <!-- deco food illustrations (low opacity, rotated) -->
+    <ImageView
+        android:id="@+id/decoVegetables"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:alpha="0.16"
+        android:rotation="-8"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ill_vegetables" />
+
+    <ImageView
+        android:id="@+id/decoFruits"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:alpha="0.16"
+        android:rotation="10"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ill_fruits" />
+
+    <ImageView
+        android:id="@+id/decoTomato"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:alpha="0.16"
+        android:rotation="-6"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ill_tomato" />
+
+    <ImageView
+        android:id="@+id/decoOthers"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:alpha="0.16"
+        android:rotation="8"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ill_others" />
+
+    <LinearLayout
+        android:id="@+id/splashContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/splashLogo"
+            android:layout_width="215dp"
+            android:layout_height="215dp"
+            android:contentDescription="@string/app_full_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/freshkeep_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
+            android:gravity="center"
+            android:text="Smart Household\nFood Management System"
+            android:textStyle="normal"
+            style="@style/Text.H1"
+            android:textSize="24sp"
+            android:textColor="@color/gray_900" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="@string/app_tagline"
+            android:textColor="@color/color_primary_press"
+            android:textSize="17sp" />
+    </LinearLayout>
+</FrameLayout>

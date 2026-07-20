@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Profile.jsx — avatar + email, toggles, reminder prefs card, rows, logout -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="28dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="100dp">
+
+        <!-- avatar + email -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/avatar"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/circle_primary_surface">
+
+                <TextView
+                    android:id="@+id/avatarLetter"
+                    style="@style/Text.H1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="R"
+                    android:textColor="@color/color_primary_press" />
+
+                <!-- Google profile photo, shown instead of the letter when available -->
+                <ImageView
+                    android:id="@+id/avatarPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:importantForAccessibility="no"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/profileName"
+                    style="@style/Text.H2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/profile_guest" />
+
+                <TextView
+                    android:id="@+id/profileEmail"
+                    style="@style/Text.BodySm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="rohim@example.com"
+                    android:textColor="@color/color_text_secondary" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- toggles -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_section_lg"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    style="@style/Text.BodyLg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/profile_notifications" />
+
+                <com.freshkeep.app.views.ToggleView
+                    android:id="@+id/toggleNotif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    style="@style/Text.BodyLg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/profile_dark_mode" />
+
+                <com.freshkeep.app.views.ToggleView
+                    android:id="@+id/toggleDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- reminder preferences -->
+        <LinearLayout
+            android:id="@+id/btnReminderPrefs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/bg_card_lg"
+            android:clickable="true"
+            android:elevation="1dp"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <FrameLayout
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/circle_primary_surface">
+
+                <com.freshkeep.app.views.IconView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="notifications"
+                    android:textColor="@color/color_primary_press"
+                    android:textSize="22dp" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Text.BodyLg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_reminder_prefs" />
+
+                <TextView
+                    style="@style/Text.BodySm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_reminder_prefs_desc"
+                    android:textColor="@color/color_text_secondary" />
+            </LinearLayout>
+
+            <com.freshkeep.app.views.IconView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="chevron_right"
+                android:textColor="@color/color_text_tertiary"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <!-- rows: Language / User Manual / About -->
+        <LinearLayout
+            android:id="@+id/rowsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/bg_section_lg"
+            android:orientation="vertical" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            style="@style/Btn.Ghost"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="@string/profile_logout"
+            android:textColor="@color/color_accent_red" />
+    </LinearLayout>
+</ScrollView>

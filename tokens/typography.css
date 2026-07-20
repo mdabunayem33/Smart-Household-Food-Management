@@ -1,0 +1,35 @@
+/* ============================================================
+   TYPE TOKENS
+   Display/heading: Baloo 2 — rounded, bold, friendly (child- and
+   elderly-legible at large sizes; used for greetings, numerals,
+   the wordmark, and empty-state moments).
+   Body/UI: Nunito — rounded terminals, warm, highly legible at
+   small sizes for labels, list rows and body copy.
+   Substituted for Google Sans / SF Pro Rounded (not distributable
+   via Google Fonts) — see readme.md Visual Foundations note.
+   ============================================================ */
+
+:root {
+  --font-display: 'Baloo 2', 'Nunito', system-ui, sans-serif;
+  --font-body: 'Nunito', system-ui, -apple-system, sans-serif;
+
+  /* Type scale — mobile-first, large touch/legibility targets */
+  --text-display-lg: 700 40px/1.15 var(--font-display);   /* splash tagline, celebration */
+  --text-display: 700 32px/1.2 var(--font-display);        /* "Good morning, Priya" */
+  --text-h1: 700 28px/1.25 var(--font-display);             /* screen titles */
+  --text-h2: 700 22px/1.3 var(--font-display);              /* section headers */
+  --text-h3: 700 18px/1.35 var(--font-display);             /* card titles */
+
+  --text-body-lg: 600 17px/1.5 var(--font-body);
+  --text-body: 500 15px/1.5 var(--font-body);
+  --text-body-sm: 500 13px/1.45 var(--font-body);
+  --text-caption: 600 12px/1.4 var(--font-body);
+  --text-label: 700 13px/1.2 var(--font-body);              /* buttons, chips, nav labels */
+  --text-overline: 700 11px/1.2 var(--font-body);           /* uppercase eyebrow */
+
+  --text-numeral-lg: 800 36px/1.1 var(--font-display);      /* stat values */
+  --text-numeral: 800 24px/1.15 var(--font-display);
+
+  --tracking-overline: 0.08em;
+  --tracking-tight: -0.01em;
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Left urgency stripe — rounded on the card's left edge; tinted at runtime -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/color_accent_red" />
+    <corners
+        android:bottomLeftRadius="@dimen/radius_lg"
+        android:topLeftRadius="@dimen/radius_lg" />
+</shape>

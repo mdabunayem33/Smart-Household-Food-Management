@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand name — never translated -->
+    <string name="app_name" translatable="false">FreshKeep</string>
+    <string name="app_full_name">Smart Household Food Management System</string>
+    <string name="app_tagline">Manage. Plan. Save.</string>
+
+    <!-- Bottom navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_inventory">Inventory</string>
+    <string name="nav_shopping">Shopping</string>
+    <string name="nav_analytics">Analytics</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- Common actions -->
+    <string name="action_cancel">Cancel</string>
+    <string name="action_save">Save</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_remove">Remove</string>
+    <string name="action_discard">Discard</string>
+    <string name="action_confirm">Confirm</string>
+    <string name="action_change">Change</string>
+    <string name="action_next">Next</string>
+    <string name="action_skip">Skip</string>
+    <string name="action_get_started">Get Started</string>
+    <string name="action_continue">Continue</string>
+    <string name="action_see_all">See all</string>
+    <string name="action_add_item">Add item</string>
+
+    <!-- Onboarding -->
+    <string name="ob_track_title">Track Your Food</string>
+    <string name="ob_track_body">Keep every food item organized in one place.</string>
+    <string name="ob_waste_title">Waste Less Food</string>
+    <string name="ob_waste_body">Smart reminders help you use food before it expires.</string>
+    <string name="ob_shop_title">Shop Smart</string>
+    <string name="ob_shop_body">Buy only what you need and save money every week.</string>
+
+    <!-- Login -->
+    <string name="login_welcome">Welcome to Smart Household Food Management</string>
+    <string name="login_google">Continue with Google</string>
+    <string name="login_guest">Continue as Guest</string>
+    <string name="login_failed">Google Sign-In failed. Please try again.</string>
+    <string name="login_no_account">No Google account found on this device. Add one in Settings and try again.</string>
+    <string name="login_not_configured">Google Sign-In is not configured: add google-services.json to the app folder and rebuild.</string>
+
+    <!-- Shopping setup -->
+    <string name="setup_title">How often do you usually shop for groceries?</string>
+    <string name="setup_subtitle">Choose your shopping schedule so we can automatically prepare your shopping list based on your inventory.</string>
+    <string name="freq_weekly">Weekly</string>
+    <string name="freq_weekly_desc">I usually shop once every week.</string>
+    <string name="freq_biweekly">Every 15 Days</string>
+    <string name="freq_biweekly_desc">I usually shop every two weeks.</string>
+    <string name="freq_monthly">Monthly</string>
+    <string name="freq_monthly_desc">I usually shop once every month.</string>
+
+    <!-- Home -->
+    <string name="greet_morning">Good Morning</string>
+    <string name="greet_afternoon">Good Afternoon</string>
+    <string name="greet_evening">Good Evening</string>
+    <string name="greet_night">Good Night</string>
+    <string name="home_in_stock">In Stock</string>
+    <string name="home_eat_first">Eat First</string>
+    <string name="home_to_buy">To Buy</string>
+    <string name="home_expiring_soon">Expiring soon</string>
+    <string name="home_recently_added">Recently added</string>
+    <string name="home_nothing_expiring">Nothing expiring soon — you\'re all set 🎉</string>
+    <string name="home_items">%1$d Items</string>
+
+    <!-- Home insight card -->
+    <string name="insight_get_started">Get started</string>
+    <string name="insight_add_first_item">Add first item</string>
+    <string name="insight_reminder">Reminder</string>
+    <string name="insight_expired_items">Expired items</string>
+    <string name="insight_expiring_soon">Expiring soon</string>
+    <string name="insight_great_job">Great job!</string>
+    <string name="insight_waste_down">Food waste ↓ %1$d%%</string>
+    <string name="insight_keep_going">Keep it going</string>
+    <string name="insight_looking_good">Looking good</string>
+    <string name="insight_all_fresh">All fresh</string>
+
+    <!-- Inventory -->
+    <string name="inventory_title">Inventory</string>
+    <string name="inventory_search_hint">Search inventory</string>
+    <string name="inventory_nothing_here">Nothing here yet</string>
+    <string name="inventory_all">All</string>
+    <string name="inventory_empty">No items found</string>
+    <string name="inventory_deleted">Product deleted successfully.</string>
+    <string name="delete_product_title">Delete Product?</string>
+    <string name="delete_product_message">Are you sure you want to remove \"%1$s\" from your inventory?</string>
+
+    <!-- Food detail sheet -->
+    <string name="detail_mark_consumed">Mark as Consumed</string>
+    <string name="detail_adjust_quantity">Adjust Quantity</string>
+    <string name="detail_discard">Discard</string>
+    <string name="consume_title">Mark as Consumed?</string>
+    <string name="consume_message">This item will be marked as consumed and removed from your inventory.</string>
+    <string name="discard_title">Discard Item?</string>
+    <string name="discard_message">This item will be permanently removed from your inventory.</string>
+    <string name="discard_message_edible">This item will be permanently removed from your inventory. %1$s has not expired yet — you are discarding edible food.</string>
+    <string name="qty_zero_title">Quantity is Zero</string>
+    <string name="qty_zero_message">This item\'s quantity is now zero. Would you like to mark it as consumed?</string>
+
+    <!-- Expiry status -->
+    <string name="expiry_today">Expires today</string>
+    <string name="expiry_tomorrow">Expires tomorrow</string>
+    <string name="expiry_in_days">Expires in %1$d days</string>
+    <string name="expiry_fresh_days">Fresh for %1$d+ days</string>
+    <string name="expiry_yesterday">Expired yesterday</string>
+    <string name="expiry_days_ago">Expired %1$d days ago</string>
+
+    <!-- Add / edit food -->
+    <string name="add_choose_category">Choose a category</string>
+    <string name="add_choose_product">Choose a product</string>
+    <string name="add_quantity_title">Adjust Quantity</string>
+    <string name="add_current_quantity">Current quantity: %1$s</string>
+
+    <!-- Shopping -->
+    <string name="shopping_title">Shopping list</string>
+    <string name="shopping_next">NEXT SHOPPING</string>
+    <string name="shopping_progress">SHOPPING PROGRESS</string>
+    <string name="shopping_to_buy">To buy</string>
+    <string name="shopping_everything_stocked">Everything is stocked.</string>
+    <string name="shopping_none_needed">No shopping needed today.</string>
+    <string name="recent_empty_title">No recently added items.</string>
+    <string name="recent_empty_body">Start by adding your first food item.</string>
+    <string name="fab_add_food">Add food</string>
+    <string name="shopping_purchased_count">%1$d of %2$d purchased</string>
+    <string name="shopping_all_purchased">All items purchased 🎉</string>
+    <string name="shopping_purchased_header">Purchased</string>
+    <string name="shopping_reason_low">Low stock</string>
+    <string name="shopping_reason_out">Out of stock</string>
+    <string name="shopping_reason_expiring">Expiring soon</string>
+    <string name="shopping_remove_title">Remove item?</string>
+    <string name="shopping_remove_message">Are you sure you want to remove %1$s from your shopping list?</string>
+    <string name="shopping_footer">Auto-prepared from your inventory · updates every %1$s</string>
+    <string name="shopping_schedule">%1$s schedule</string>
+
+    <!-- Analytics -->
+    <string name="analytics_title">Analytics</string>
+    <string name="analytics_monthly_waste">Monthly Food Waste</string>
+    <string name="analytics_waste_subtitle">Track how much food was wasted each week during this month.</string>
+    <string name="analytics_total_wasted">Total Wasted This Month</string>
+    <string name="analytics_avg_waste">Average Waste Per Week</string>
+    <string name="analytics_dashboard">Food Management Dashboard</string>
+    <string name="analytics_items">%1$d items</string>
+    <string name="filter_this_month">This Month</string>
+    <string name="filter_last_month">Last Month</string>
+    <string name="filter_3_months">Last 3 Months</string>
+    <string name="filter_6_months">Last 6 Months</string>
+    <string name="filter_this_year">This Year</string>
+    <string name="slice_fresh">Fresh Food</string>
+    <string name="slice_frozen">Frozen Food</string>
+    <string name="slice_pantry">Pantry Items</string>
+    <string name="slice_expiring">Expiring Soon</string>
+    <string name="slice_wasted">Wasted</string>
+    <string name="insight_same">Food waste remained nearly the same as last month.</string>
+    <string name="insight_decreased">Food waste decreased by %1$d%% compared to last month.</string>
+    <string name="insight_increased">Food waste increased by %1$d%% compared to last month.</string>
+
+    <!-- Profile -->
+    <string name="profile_notifications">Notifications</string>
+    <string name="profile_dark_mode">Dark mode</string>
+    <string name="profile_reminder_prefs">Reminder Preferences</string>
+    <string name="profile_reminder_prefs_desc">Manage reminder times for each food category</string>
+    <string name="profile_edit">Edit Profile</string>
+    <string name="profile_language">Language</string>
+    <string name="profile_manual">User Manual</string>
+    <string name="profile_about">About</string>
+    <string name="profile_logout">Log out</string>
+    <string name="profile_guest">Guest</string>
+    <string name="profile_display_name">Display name</string>
+    <string name="profile_name_hint">Your name</string>
+    <string name="profile_name_required">Enter a name</string>
+    <string name="profile_signed_in_google">Signed in with Google · %1$s</string>
+    <string name="profile_signed_in_guest">Signed in as Guest</string>
+
+    <!-- Language -->
+    <string name="language_change_title">Change Language?</string>
+    <string name="language_change_message">Are you sure you want to change the application language to \"%1$s\"?</string>
+
+    <!-- Reminder preferences -->
+    <string name="reminder_on_expiry">On Expiry Day</string>
+    <string name="reminder_1_day">1 Day Before</string>
+    <string name="reminder_2_days">2 Days Before</string>
+    <string name="reminder_3_days">3 Days Before</string>
+    <string name="reminder_5_days">5 Days Before</string>
+    <string name="reminder_7_days">7 Days Before</string>
+    <string name="cat_vegetables">Vegetables</string>
+    <string name="cat_fruits">Fruits</string>
+    <string name="cat_dairy">Dairy</string>
+    <string name="cat_meat_fish">Meat &amp; Fish</string>
+    <string name="cat_packaged">Packaged Foods</string>
+    <string name="cat_frozen">Frozen Foods</string>
+    <string name="cat_beverages">Beverages</string>
+
+    <!-- Screen titles -->
+    <string name="title_about">About App</string>
+    <string name="title_eat_first">Eat First</string>
+    <string name="title_edit_product">Edit Product</string>
+    <string name="title_user_manual">User Manual</string>
+
+    <!-- Add food -->
+    <string name="add_food_name">Food name</string>
+    <string name="add_item_name">Item name</string>
+    <string name="add_manual_hint">No category chosen — just tell us what you got and we\'ll figure out the rest.</string>
+    <string name="add_manual_hint_category">No preset products yet for \"%1$s\" — name your item.</string>
+    <string name="add_category_caption">Category: %1$s</string>
+    <string name="add_expires_in">Expires in %1$d days</string>
+    <string name="add_food_added">Food added!</string>
+    <string name="add_food_remind">We\'ll remind you before your %1$s expires</string>
+    <string name="add_custom_added">Custom product added successfully.</string>
+    <plurals name="days">
+        <item quantity="one">%1$d Day</item>
+        <item quantity="other">%1$d Days</item>
+    </plurals>
+    <plurals name="days_before">
+        <item quantity="one">%1$d Day Before</item>
+        <item quantity="other">%1$d Days Before</item>
+    </plurals>
+
+    <string name="toast_category_updated">Category updated.</string>
+    <string name="toast_category_created">Custom category created successfully.</string>
+    <string name="toast_category_deleted">Category deleted.</string>
+    <string name="toast_reminder_updated">Reminder updated successfully.</string>
+
+    <!-- Reminder preferences -->
+    <string name="reminder_today">Today</string>
+    <string name="reminder_intro">Every category — including your custom ones — gets its own reminder schedule.</string>
+    <string name="reminder_enable">Enable Reminder</string>
+    <string name="reminder_push">Push Notification</string>
+    <string name="reminder_sound">Sound</string>
+    <string name="reminder_vibration">Vibration</string>
+
+    <!-- Add Food wizard -->
+    <string name="add_or">OR</string>
+    <string name="add_type_food_name">Type a food name</string>
+    <string name="add_use">Use</string>
+    <string name="add_name_example">e.g. Tomato, Milk, Hilsa…</string>
+    <string name="add_choose_category_instead">Choose a category instead</string>
+    <string name="add_change">Change</string>
+    <string name="add_unit">Unit</string>
+    <string name="add_expires_after">Expires after</string>
+    <string name="add_duration_type">Expiry Duration Type</string>
+    <string name="add_today_date">Today\'s date</string>
+    <string name="add_selected_duration">Selected duration</string>
+    <string name="add_estimated_expiry">Estimated expiry date</string>
+    <string name="add_exact_date">Exact Expiry Date</string>
+    <string name="add_exact_date_desc">Choose the exact calendar date.</string>
+    <string name="add_add_date">Add Date</string>
+    <string name="add_use_duration">Use duration instead</string>
+    <string name="add_remind_generic">We\'ll remind you before your item expires</string>
+
+    <!-- Custom product sheet -->
+    <string name="cp_title">Add New Product</string>
+    <string name="cp_name">Product name</string>
+    <string name="cp_name_hint">e.g. Hilsa</string>
+    <string name="cp_image">Product image</string>
+    <string name="cp_default_unit">Default unit</string>
+    <string name="cp_default_expiry">Default expiry duration (days, optional)</string>
+    <string name="cp_expiry_hint">e.g. 14</string>
+    <string name="cp_delete">Delete product</string>
+
+    <!-- Custom category sheet -->
+    <string name="cc_title">Create custom category</string>
+    <string name="cc_name">Category name</string>
+    <string name="cc_name_hint">e.g. Baby Food</string>
+    <string name="cc_icon">Icon</string>
+    <string name="cc_color">Color</string>
+    <string name="cc_create">Create Category</string>
+    <string name="cc_delete">Delete category</string>
+
+    <!-- Custom reminder sheet -->
+    <string name="cr_title">Custom Reminder</string>
+    <string name="cr_save">Save Reminder</string>
+
+    <!-- Errors -->
+    <string name="error_signin_no_user">Google Sign-In failed: no user returned.</string>
+    <string name="error_signin_generic">Google Sign-In failed: %1$s</string>
+    <string name="error_credential_type">Unexpected credential type. Please try again.</string>
+    <string name="error_play_services">Google Play services is not available on this device.</string>
+
+    <!-- Notifications -->
+    <string name="notif_channel_name">Food expiry reminders</string>
+    <string name="notif_channel_desc">Reminds you before food in your inventory expires.</string>
+    <string name="notif_title">Food Expiry Reminder</string>
+    <string name="notif_expires_today">%1$s expires today.</string>
+    <string name="notif_expires_tomorrow">%1$s expires tomorrow.</string>
+    <string name="notif_expires_in_days">%1$s expires in %2$d days.</string>
+    <string name="notif_expired_yesterday">%1$s expired yesterday.</string>
+    <string name="notif_expired_days_ago">%1$s expired %2$d days ago.</string>
+</resources>

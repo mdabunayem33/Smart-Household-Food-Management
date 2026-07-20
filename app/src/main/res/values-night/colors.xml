@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dark theme — mirrors tokens/colors.css [data-theme="dark"] -->
+<resources>
+    <color name="color_bg">#14170F</color>
+    <color name="color_bg_section">#1B1F17</color>
+    <color name="color_bg_elevated">#20251C</color>
+
+    <color name="color_text_primary">#F2F5F0</color>
+    <color name="color_text_secondary">#A7B3A9</color>
+    <color name="color_text_tertiary">#6E7A70</color>
+
+    <color name="color_primary_surface">#0C290D</color>
+    <color name="color_primary_surface_strong">#0E3811</color>
+    <color name="color_primary_border">#1F4E21</color>
+
+    <color name="color_border">#2B322A</color>
+    <color name="color_border_strong">#394236</color>
+    <color name="color_divider">#232921</color>
+
+    <color name="color_fresh_surface">#0C290D</color>
+    <color name="color_soon_surface">#442600</color>
+    <color name="color_expired_surface">#451816</color>
+    <color name="color_aging_surface">#3C3207</color>
+</resources>

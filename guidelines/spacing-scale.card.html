@@ -1,0 +1,18 @@
+<!-- @dsCard group="Spacing" viewport="700x180" name="Spacing Scale" subtitle="8px base grid, 4px–80px" -->
+<!DOCTYPE html>
+<html><head><link rel="stylesheet" href="../../styles.css">
+<style>
+  body{margin:0;padding:20px;background:var(--color-bg);display:flex;flex-direction:column;gap:8px;}
+  .row{display:flex;align-items:center;gap:12px;}
+  .bar{background:var(--color-primary);height:16px;border-radius:4px;}
+  .lbl{font:var(--text-caption);color:var(--color-text-secondary);width:70px;}
+</style></head>
+<body>
+  <div class="row"><span class="lbl">4px</span><div class="bar" style="width:var(--space-1)"></div></div>
+  <div class="row"><span class="lbl">8px</span><div class="bar" style="width:var(--space-2)"></div></div>
+  <div class="row"><span class="lbl">16px</span><div class="bar" style="width:var(--space-4)"></div></div>
+  <div class="row"><span class="lbl">24px</span><div class="bar" style="width:var(--space-6)"></div></div>
+  <div class="row"><span class="lbl">32px</span><div class="bar" style="width:var(--space-7)"></div></div>
+  <div class="row"><span class="lbl">48px</span><div class="bar" style="width:var(--space-9)"></div></div>
+  <div class="row"><span class="lbl">64px</span><div class="bar" style="width:var(--space-10)"></div></div>
+</body></html>

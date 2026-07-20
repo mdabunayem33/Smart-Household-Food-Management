@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_full_name">স্মার্ট গৃহস্থালি খাদ্য ব্যবস্থাপনা সিস্টেম</string>
+    <string name="app_tagline">পরিচালনা। পরিকল্পনা। সাশ্রয়।</string>
+
+    <!-- Bottom navigation -->
+    <string name="nav_home">হোম</string>
+    <string name="nav_inventory">ইনভেন্টরি</string>
+    <string name="nav_shopping">শপিং</string>
+    <string name="nav_analytics">বিশ্লেষণ</string>
+    <string name="nav_profile">প্রোফাইল</string>
+
+    <!-- Common actions -->
+    <string name="action_cancel">বাতিল</string>
+    <string name="action_save">সংরক্ষণ</string>
+    <string name="action_delete">মুছুন</string>
+    <string name="action_remove">সরান</string>
+    <string name="action_discard">ফেলে দিন</string>
+    <string name="action_confirm">নিশ্চিত করুন</string>
+    <string name="action_change">পরিবর্তন</string>
+    <string name="action_next">পরবর্তী</string>
+    <string name="action_skip">এড়িয়ে যান</string>
+    <string name="action_get_started">শুরু করুন</string>
+    <string name="action_continue">চালিয়ে যান</string>
+    <string name="action_see_all">সব দেখুন</string>
+    <string name="action_add_item">আইটেম যোগ করুন</string>
+
+    <!-- Onboarding -->
+    <string name="ob_track_title">আপনার খাবার ট্র্যাক করুন</string>
+    <string name="ob_track_body">প্রতিটি খাদ্য উপকরণ এক জায়গায় গুছিয়ে রাখুন।</string>
+    <string name="ob_waste_title">কম খাবার নষ্ট করুন</string>
+    <string name="ob_waste_body">স্মার্ট রিমাইন্ডার মেয়াদ শেষের আগেই খাবার ব্যবহারে সাহায্য করে।</string>
+    <string name="ob_shop_title">স্মার্ট কেনাকাটা</string>
+    <string name="ob_shop_body">শুধু প্রয়োজনীয় জিনিস কিনুন এবং প্রতি সপ্তাহে টাকা সাশ্রয় করুন।</string>
+
+    <!-- Login -->
+    <string name="login_welcome">স্মার্ট গৃহস্থালি খাদ্য ব্যবস্থাপনায় স্বাগতম</string>
+    <string name="login_google">Google দিয়ে চালিয়ে যান</string>
+    <string name="login_guest">অতিথি হিসেবে চালিয়ে যান</string>
+    <string name="login_failed">Google সাইন-ইন ব্যর্থ হয়েছে। আবার চেষ্টা করুন।</string>
+    <string name="login_no_account">এই ডিভাইসে কোনো Google অ্যাকাউন্ট পাওয়া যায়নি। সেটিংসে একটি যোগ করে আবার চেষ্টা করুন।</string>
+    <string name="login_not_configured">Google সাইন-ইন কনফিগার করা নেই: অ্যাপ ফোল্ডারে google-services.json যোগ করে আবার বিল্ড করুন।</string>
+
+    <!-- Shopping setup -->
+    <string name="setup_title">আপনি সাধারণত কত ঘন ঘন বাজার করেন?</string>
+    <string name="setup_subtitle">আপনার কেনাকাটার সময়সূচি বেছে নিন, যাতে আমরা আপনার ইনভেন্টরি অনুযায়ী স্বয়ংক্রিয়ভাবে শপিং তালিকা তৈরি করতে পারি।</string>
+    <string name="freq_weekly">সাপ্তাহিক</string>
+    <string name="freq_weekly_desc">আমি সাধারণত সপ্তাহে একবার বাজার করি।</string>
+    <string name="freq_biweekly">প্রতি ১৫ দিনে</string>
+    <string name="freq_biweekly_desc">আমি সাধারণত দুই সপ্তাহে একবার বাজার করি।</string>
+    <string name="freq_monthly">মাসিক</string>
+    <string name="freq_monthly_desc">আমি সাধারণত মাসে একবার বাজার করি।</string>
+
+    <!-- Home -->
+    <string name="greet_morning">সুপ্রভাত</string>
+    <string name="greet_afternoon">শুভ অপরাহ্ন</string>
+    <string name="greet_evening">শুভ সন্ধ্যা</string>
+    <string name="greet_night">শুভ রাত্রি</string>
+    <string name="home_in_stock">মজুদ আছে</string>
+    <string name="home_eat_first">আগে খান</string>
+    <string name="home_to_buy">কিনতে হবে</string>
+    <string name="home_expiring_soon">শীঘ্রই মেয়াদ শেষ</string>
+    <string name="home_recently_added">সম্প্রতি যোগ করা</string>
+    <string name="home_nothing_expiring">শীঘ্রই কিছুর মেয়াদ শেষ হচ্ছে না — সব ঠিক আছে 🎉</string>
+    <string name="home_items">%1$d টি আইটেম</string>
+
+    <!-- Home insight card -->
+    <string name="insight_get_started">শুরু করুন</string>
+    <string name="insight_add_first_item">প্রথম আইটেম যোগ করুন</string>
+    <string name="insight_reminder">রিমাইন্ডার</string>
+    <string name="insight_expired_items">মেয়াদোত্তীর্ণ আইটেম</string>
+    <string name="insight_expiring_soon">শীঘ্রই মেয়াদ শেষ</string>
+    <string name="insight_great_job">দারুণ!</string>
+    <string name="insight_waste_down">খাদ্য অপচয় ↓ %1$d%%</string>
+    <string name="insight_keep_going">চালিয়ে যান</string>
+    <string name="insight_looking_good">ভালো চলছে</string>
+    <string name="insight_all_fresh">সব তাজা</string>
+
+    <!-- Inventory -->
+    <string name="inventory_title">ইনভেন্টরি</string>
+    <string name="inventory_search_hint">ইনভেন্টরি খুঁজুন</string>
+    <string name="inventory_nothing_here">এখনো কিছু নেই</string>
+    <string name="inventory_all">সব</string>
+    <string name="inventory_empty">কোনো আইটেম পাওয়া যায়নি</string>
+    <string name="inventory_deleted">পণ্য সফলভাবে মুছে ফেলা হয়েছে।</string>
+    <string name="delete_product_title">পণ্য মুছে ফেলবেন?</string>
+    <string name="delete_product_message">আপনি কি নিশ্চিত যে \"%1$s\" আপনার ইনভেন্টরি থেকে সরাতে চান?</string>
+
+    <!-- Food detail sheet -->
+    <string name="detail_mark_consumed">খাওয়া হয়েছে চিহ্নিত করুন</string>
+    <string name="detail_adjust_quantity">পরিমাণ পরিবর্তন করুন</string>
+    <string name="detail_discard">ফেলে দিন</string>
+    <string name="consume_title">খাওয়া হয়েছে চিহ্নিত করবেন?</string>
+    <string name="consume_message">এই আইটেমটি খাওয়া হয়েছে হিসেবে চিহ্নিত হবে এবং ইনভেন্টরি থেকে সরে যাবে।</string>
+    <string name="discard_title">আইটেম ফেলে দেবেন?</string>
+    <string name="discard_message">এই আইটেমটি আপনার ইনভেন্টরি থেকে স্থায়ীভাবে মুছে যাবে।</string>
+    <string name="discard_message_edible">এই আইটেমটি আপনার ইনভেন্টরি থেকে স্থায়ীভাবে মুছে যাবে। %1$s এখনো মেয়াদোত্তীর্ণ হয়নি — আপনি খাওয়ার উপযোগী খাবার ফেলে দিচ্ছেন।</string>
+    <string name="qty_zero_title">পরিমাণ শূন্য</string>
+    <string name="qty_zero_message">এই আইটেমের পরিমাণ এখন শূন্য। এটি কি খাওয়া হয়েছে হিসেবে চিহ্নিত করতে চান?</string>
+
+    <!-- Expiry status -->
+    <string name="expiry_today">আজ মেয়াদ শেষ</string>
+    <string name="expiry_tomorrow">আগামীকাল মেয়াদ শেষ</string>
+    <string name="expiry_in_days">%1$d দিনে মেয়াদ শেষ</string>
+    <string name="expiry_fresh_days">%1$d+ দিন তাজা</string>
+    <string name="expiry_yesterday">গতকাল মেয়াদ শেষ হয়েছে</string>
+    <string name="expiry_days_ago">%1$d দিন আগে মেয়াদ শেষ হয়েছে</string>
+
+    <!-- Add / edit food -->
+    <string name="add_choose_category">একটি ক্যাটাগরি বেছে নিন</string>
+    <string name="add_choose_product">একটি পণ্য বেছে নিন</string>
+    <string name="add_quantity_title">পরিমাণ পরিবর্তন করুন</string>
+    <string name="add_current_quantity">বর্তমান পরিমাণ: %1$s</string>
+
+    <!-- Shopping -->
+    <string name="shopping_title">শপিং তালিকা</string>
+    <string name="shopping_next">পরবর্তী কেনাকাটা</string>
+    <string name="shopping_progress">কেনাকাটার অগ্রগতি</string>
+    <string name="shopping_to_buy">কিনতে হবে</string>
+    <string name="shopping_everything_stocked">সবকিছু মজুদ আছে।</string>
+    <string name="shopping_none_needed">আজ কেনাকাটার প্রয়োজন নেই।</string>
+    <string name="recent_empty_title">সম্প্রতি কোনো আইটেম যোগ করা হয়নি।</string>
+    <string name="recent_empty_body">আপনার প্রথম খাদ্য আইটেম যোগ করে শুরু করুন।</string>
+    <string name="fab_add_food">খাবার যোগ করুন</string>
+    <string name="shopping_purchased_count">%2$d টির মধ্যে %1$d টি কেনা হয়েছে</string>
+    <string name="shopping_all_purchased">সব আইটেম কেনা হয়েছে 🎉</string>
+    <string name="shopping_purchased_header">কেনা হয়েছে</string>
+    <string name="shopping_reason_low">কম মজুদ</string>
+    <string name="shopping_reason_out">মজুদ নেই</string>
+    <string name="shopping_reason_expiring">শীঘ্রই মেয়াদ শেষ</string>
+    <string name="shopping_remove_title">আইটেম সরাবেন?</string>
+    <string name="shopping_remove_message">আপনি কি নিশ্চিত যে %1$s শপিং তালিকা থেকে সরাতে চান?</string>
+    <string name="shopping_footer">আপনার ইনভেন্টরি থেকে স্বয়ংক্রিয়ভাবে তৈরি · %1$s আপডেট হয়</string>
+    <string name="shopping_schedule">%1$s সময়সূচি</string>
+
+    <!-- Analytics -->
+    <string name="analytics_title">বিশ্লেষণ</string>
+    <string name="analytics_monthly_waste">মাসিক খাদ্য অপচয়</string>
+    <string name="analytics_waste_subtitle">এই মাসে প্রতি সপ্তাহে কত খাবার নষ্ট হয়েছে তা দেখুন।</string>
+    <string name="analytics_total_wasted">এই মাসে মোট অপচয়</string>
+    <string name="analytics_avg_waste">সপ্তাহপ্রতি গড় অপচয়</string>
+    <string name="analytics_dashboard">খাদ্য ব্যবস্থাপনা ড্যাশবোর্ড</string>
+    <string name="analytics_items">%1$d টি আইটেম</string>
+    <string name="filter_this_month">এই মাস</string>
+    <string name="filter_last_month">গত মাস</string>
+    <string name="filter_3_months">গত ৩ মাস</string>
+    <string name="filter_6_months">গত ৬ মাস</string>
+    <string name="filter_this_year">এই বছর</string>
+    <string name="slice_fresh">তাজা খাবার</string>
+    <string name="slice_frozen">হিমায়িত খাবার</string>
+    <string name="slice_pantry">প্যান্ট্রি আইটেম</string>
+    <string name="slice_expiring">শীঘ্রই মেয়াদ শেষ</string>
+    <string name="slice_wasted">অপচয়</string>
+    <string name="insight_same">গত মাসের তুলনায় খাদ্য অপচয় প্রায় একই রয়েছে।</string>
+    <string name="insight_decreased">গত মাসের তুলনায় খাদ্য অপচয় %1$d%% কমেছে।</string>
+    <string name="insight_increased">গত মাসের তুলনায় খাদ্য অপচয় %1$d%% বেড়েছে।</string>
+
+    <!-- Profile -->
+    <string name="profile_notifications">বিজ্ঞপ্তি</string>
+    <string name="profile_dark_mode">ডার্ক মোড</string>
+    <string name="profile_reminder_prefs">রিমাইন্ডার পছন্দসমূহ</string>
+    <string name="profile_reminder_prefs_desc">প্রতিটি খাদ্য ক্যাটাগরির রিমাইন্ডার সময় নির্ধারণ করুন</string>
+    <string name="profile_edit">প্রোফাইল সম্পাদনা</string>
+    <string name="profile_language">ভাষা</string>
+    <string name="profile_manual">ব্যবহারকারী নির্দেশিকা</string>
+    <string name="profile_about">সম্পর্কে</string>
+    <string name="profile_logout">লগ আউট</string>
+    <string name="profile_guest">অতিথি</string>
+    <string name="profile_display_name">প্রদর্শিত নাম</string>
+    <string name="profile_name_hint">আপনার নাম</string>
+    <string name="profile_name_required">একটি নাম লিখুন</string>
+    <string name="profile_signed_in_google">Google দিয়ে সাইন ইন · %1$s</string>
+    <string name="profile_signed_in_guest">অতিথি হিসেবে সাইন ইন</string>
+
+    <!-- Language -->
+    <string name="language_change_title">ভাষা পরিবর্তন করবেন?</string>
+    <string name="language_change_message">আপনি কি নিশ্চিত যে অ্যাপের ভাষা \"%1$s\" এ পরিবর্তন করতে চান?</string>
+
+    <!-- Reminder preferences -->
+    <string name="reminder_on_expiry">মেয়াদ শেষের দিন</string>
+    <string name="reminder_1_day">১ দিন আগে</string>
+    <string name="reminder_2_days">২ দিন আগে</string>
+    <string name="reminder_3_days">৩ দিন আগে</string>
+    <string name="reminder_5_days">৫ দিন আগে</string>
+    <string name="reminder_7_days">৭ দিন আগে</string>
+    <string name="cat_vegetables">সবজি</string>
+    <string name="cat_fruits">ফল</string>
+    <string name="cat_dairy">দুগ্ধজাত</string>
+    <string name="cat_meat_fish">মাংস ও মাছ</string>
+    <string name="cat_packaged">প্যাকেটজাত খাবার</string>
+    <string name="cat_frozen">হিমায়িত খাবার</string>
+    <string name="cat_beverages">পানীয়</string>
+
+    <!-- Screen titles -->
+    <string name="title_about">অ্যাপ সম্পর্কে</string>
+    <string name="title_eat_first">আগে খান</string>
+    <string name="title_edit_product">পণ্য সম্পাদনা</string>
+    <string name="title_user_manual">ব্যবহারকারী নির্দেশিকা</string>
+
+    <!-- Add food -->
+    <string name="add_food_name">খাবারের নাম</string>
+    <string name="add_item_name">আইটেমের নাম</string>
+    <string name="add_manual_hint">কোনো ক্যাটাগরি বাছাই করা হয়নি — শুধু নাম লিখুন, বাকিটা আমরা দেখছি।</string>
+    <string name="add_manual_hint_category">\"%1$s\" এর জন্য এখনো কোনো প্রিসেট পণ্য নেই — আপনার আইটেমের নাম লিখুন।</string>
+    <string name="add_category_caption">ক্যাটাগরি: %1$s</string>
+    <string name="add_expires_in">%1$d দিনে মেয়াদ শেষ</string>
+    <string name="add_food_added">খাবার যোগ হয়েছে!</string>
+    <string name="add_food_remind">আপনার %1$s এর মেয়াদ শেষের আগে আমরা মনে করিয়ে দেব</string>
+    <string name="add_custom_added">কাস্টম পণ্য সফলভাবে যোগ হয়েছে।</string>
+    <plurals name="days">
+        <item quantity="one">%1$d দিন</item>
+        <item quantity="other">%1$d দিন</item>
+    </plurals>
+    <plurals name="days_before">
+        <item quantity="one">%1$d দিন আগে</item>
+        <item quantity="other">%1$d দিন আগে</item>
+    </plurals>
+
+    <string name="toast_category_updated">ক্যাটাগরি হালনাগাদ হয়েছে।</string>
+    <string name="toast_category_created">কাস্টম ক্যাটাগরি সফলভাবে তৈরি হয়েছে।</string>
+    <string name="toast_category_deleted">ক্যাটাগরি মুছে ফেলা হয়েছে।</string>
+    <string name="toast_reminder_updated">রিমাইন্ডার সফলভাবে হালনাগাদ হয়েছে।</string>
+
+    <!-- Reminder preferences -->
+    <string name="reminder_today">আজ</string>
+    <string name="reminder_intro">প্রতিটি ক্যাটাগরি — আপনার কাস্টম ক্যাটাগরিসহ — নিজস্ব রিমাইন্ডার সময়সূচি পায়।</string>
+    <string name="reminder_enable">রিমাইন্ডার চালু করুন</string>
+    <string name="reminder_push">পুশ নোটিফিকেশন</string>
+    <string name="reminder_sound">শব্দ</string>
+    <string name="reminder_vibration">ভাইব্রেশন</string>
+
+    <!-- Add Food wizard -->
+    <string name="add_or">অথবা</string>
+    <string name="add_type_food_name">খাবারের নাম লিখুন</string>
+    <string name="add_use">ব্যবহার করুন</string>
+    <string name="add_name_example">যেমন টমেটো, দুধ, ইলিশ…</string>
+    <string name="add_choose_category_instead">বরং একটি ক্যাটাগরি বেছে নিন</string>
+    <string name="add_change">পরিবর্তন</string>
+    <string name="add_unit">একক</string>
+    <string name="add_expires_after">মেয়াদ শেষ হবে</string>
+    <string name="add_duration_type">মেয়াদের ধরন</string>
+    <string name="add_today_date">আজকের তারিখ</string>
+    <string name="add_selected_duration">নির্বাচিত সময়কাল</string>
+    <string name="add_estimated_expiry">আনুমানিক মেয়াদ শেষের তারিখ</string>
+    <string name="add_exact_date">নির্দিষ্ট মেয়াদ শেষের তারিখ</string>
+    <string name="add_exact_date_desc">ক্যালেন্ডার থেকে নির্দিষ্ট তারিখ বেছে নিন।</string>
+    <string name="add_add_date">তারিখ যোগ করুন</string>
+    <string name="add_use_duration">বরং সময়কাল ব্যবহার করুন</string>
+    <string name="add_remind_generic">মেয়াদ শেষের আগে আমরা আপনাকে মনে করিয়ে দেব</string>
+
+    <!-- Custom product sheet -->
+    <string name="cp_title">নতুন পণ্য যোগ করুন</string>
+    <string name="cp_name">পণ্যের নাম</string>
+    <string name="cp_name_hint">যেমন ইলিশ</string>
+    <string name="cp_image">পণ্যের ছবি</string>
+    <string name="cp_default_unit">ডিফল্ট একক</string>
+    <string name="cp_default_expiry">ডিফল্ট মেয়াদকাল (দিন, ঐচ্ছিক)</string>
+    <string name="cp_expiry_hint">যেমন ১৪</string>
+    <string name="cp_delete">পণ্য মুছুন</string>
+
+    <!-- Custom category sheet -->
+    <string name="cc_title">কাস্টম ক্যাটাগরি তৈরি করুন</string>
+    <string name="cc_name">ক্যাটাগরির নাম</string>
+    <string name="cc_name_hint">যেমন শিশুখাদ্য</string>
+    <string name="cc_icon">আইকন</string>
+    <string name="cc_color">রঙ</string>
+    <string name="cc_create">ক্যাটাগরি তৈরি করুন</string>
+    <string name="cc_delete">ক্যাটাগরি মুছুন</string>
+
+    <!-- Custom reminder sheet -->
+    <string name="cr_title">কাস্টম রিমাইন্ডার</string>
+    <string name="cr_save">রিমাইন্ডার সংরক্ষণ</string>
+
+    <!-- Errors -->
+    <string name="error_signin_no_user">Google সাইন-ইন ব্যর্থ: কোনো ব্যবহারকারী পাওয়া যায়নি।</string>
+    <string name="error_signin_generic">Google সাইন-ইন ব্যর্থ: %1$s</string>
+    <string name="error_credential_type">অপ্রত্যাশিত ক্রেডেনশিয়াল ধরন। আবার চেষ্টা করুন।</string>
+    <string name="error_play_services">এই ডিভাইসে Google Play services উপলব্ধ নেই।</string>
+
+    <!-- Notifications -->
+    <string name="notif_channel_name">খাবারের মেয়াদ রিমাইন্ডার</string>
+    <string name="notif_channel_desc">ইনভেন্টরির খাবারের মেয়াদ শেষ হওয়ার আগে মনে করিয়ে দেয়।</string>
+    <string name="notif_title">খাদ্য মেয়াদ রিমাইন্ডার</string>
+    <string name="notif_expires_today">%1$s এর মেয়াদ আজ শেষ হচ্ছে।</string>
+    <string name="notif_expires_tomorrow">%1$s এর মেয়াদ আগামীকাল শেষ হচ্ছে।</string>
+    <string name="notif_expires_in_days">%1$s এর মেয়াদ %2$d দিনে শেষ হচ্ছে।</string>
+    <string name="notif_expired_yesterday">%1$s এর মেয়াদ গতকাল শেষ হয়েছে।</string>
+    <string name="notif_expired_days_ago">%1$s এর মেয়াদ %2$d দিন আগে শেষ হয়েছে।</string>
+</resources>

@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- AddFood.jsx — 5-step wizard: category → product → quantity → expiry → 🎉 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg">
+
+    <LinearLayout
+        android:id="@+id/wizardRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <FrameLayout
+                android:id="@+id/btnBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="start|center_vertical"
+                android:background="@drawable/ripple_circle"
+                android:clickable="true"
+                android:focusable="true">
+
+                <com.freshkeep.app.views.IconView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="arrow_back"
+                    android:textColor="@color/color_text_primary"
+                    android:textSize="24dp" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/wizardTitle"
+                style="@style/Text.H2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/add_choose_category"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/btnSkip"
+                style="@style/Text.Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="8dp"
+                android:text="@string/action_skip"
+                android:textColor="@color/color_text_tertiary" />
+        </FrameLayout>
+
+        <!-- step progress: 4 segments -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="16dp">
+
+            <View
+                android:id="@+id/seg1"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/dot_active" />
+
+            <View
+                android:id="@+id/seg2"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/dot_inactive" />
+
+            <View
+                android:id="@+id/seg3"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/dot_inactive" />
+
+            <View
+                android:id="@+id/seg4"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/dot_inactive" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <!-- STEP 1: category grid -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/step1Grid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingStart="13dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="13dp"
+                android:paddingBottom="20dp"
+                android:scrollbars="none" />
+
+            <!-- STEP 2a: product grid + manual name -->
+            <ScrollView
+                android:id="@+id/step2Preset"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="13dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="13dp"
+                    android:paddingBottom="20dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/step2Grid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        android:overScrollMode="never" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="16dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="7dp"
+                        android:paddingEnd="7dp">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/color_divider" />
+
+                        <TextView
+                            style="@style/Text.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:text="@string/add_or"
+                            android:textColor="@color/color_text_tertiary" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/color_divider" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="7dp"
+                        android:paddingEnd="7dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_section_md"
+                            android:gravity="center_vertical"
+                            android:paddingStart="18dp"
+                            android:paddingEnd="18dp">
+
+                            <EditText
+                                android:id="@+id/manualNameInline"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:fontFamily="@font/nunito_semibold"
+                                android:hint="@string/add_type_food_name"
+                                android:importantForAutofill="no"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:textColor="@color/color_text_primary"
+                                android:textColorHint="@color/color_text_tertiary"
+                                android:textSize="17sp" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnUseManual"
+                            style="@style/Btn.Secondary.Md"
+                            android:layout_width="wrap_content"
+                            android:layout_height="56dp"
+                            android:layout_marginStart="10dp"
+                            android:alpha="0.45"
+                            android:enabled="false"
+                            android:text="@string/add_use" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <!-- STEP 2b: no category / custom category — name it -->
+            <LinearLayout
+                android:id="@+id/step2Manual"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="20dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/manualHint"
+                    style="@style/Text.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_manual_hint"
+                    android:textColor="@color/color_text_secondary" />
+
+                <TextView
+                    android:id="@+id/manualFieldLabel"
+                    style="@style/Text.Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/add_food_name"
+                    android:textColor="@color/color_text_secondary" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_section_md"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp">
+
+                    <com.freshkeep.app.views.IconView
+                        android:id="@+id/manualFieldIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:text="restaurant"
+                        android:textColor="@color/color_text_tertiary"
+                        android:textSize="20dp" />
+
+                    <EditText
+                        android:id="@+id/manualNameField"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:hint="@string/add_name_example"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="@color/color_text_primary"
+                        android:textColorHint="@color/color_text_tertiary"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnManualContinue"
+                    style="@style/Btn.Primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="20dp"
+                    android:alpha="0.45"
+                    android:enabled="false"
+                    android:text="@string/action_continue" />
+
+                <TextView
+                    android:id="@+id/btnChooseCategoryInstead"
+                    style="@style/Text.Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="8dp"
+                    android:text="@string/add_choose_category_instead"
+                    android:textColor="@color/color_primary_press" />
+            </LinearLayout>
+
+            <!-- STEP 3: quantity -->
+            <LinearLayout
+                android:id="@+id/step3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingTop="24dp"
+                android:paddingEnd="20dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/categoryCaption"
+                        style="@style/Text.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Category: Vegetables"
+                        android:textColor="@color/color_text_tertiary" />
+
+                    <TextView
+                        android:id="@+id/btnChangeCategory"
+                        style="@style/Text.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:padding="4dp"
+                        android:text="@string/add_change"
+                        android:textColor="@color/color_primary_press" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/qtyValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/baloo2_extrabold"
+                    android:gravity="center"
+                    android:text="1 Kg"
+                    android:textColor="@color/color_primary_press"
+                    android:textSize="40sp" />
+
+                <com.freshkeep.app.views.QuantityWheelView
+                    android:id="@+id/qtyWheel"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_marginTop="24dp" />
+
+                <TextView
+                    style="@style/Text.Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/add_unit"
+                    android:textColor="@color/color_text_secondary" />
+
+                <com.freshkeep.app.views.FlowLayout
+                    android:id="@+id/unitChips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" />
+            </LinearLayout>
+
+            <!-- STEP 4: expiry -->
+            <ScrollView
+                android:id="@+id/step4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="20dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_medium"
+                        android:gravity="center"
+                        android:text="@string/add_expires_after"
+                        android:textColor="#666666"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/expiryHeadline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/baloo2_bold"
+                        android:gravity="center"
+                        android:text="15 Days"
+                        android:textColor="#1A1A1A"
+                        android:textSize="40sp" />
+
+                    <!-- duration mode -->
+                    <LinearLayout
+                        android:id="@+id/durationSection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Text.Label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:gravity="center"
+                            android:text="@string/add_duration_type"
+                            android:textColor="@color/color_text_secondary" />
+
+                        <LinearLayout
+                            android:id="@+id/durationTypeChips"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal" />
+
+                        <TextView
+                            android:id="@+id/durationValue"
+                            style="@style/Text.Numeral"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:gravity="center"
+                            android:text="15 Days"
+                            android:textColor="@color/color_primary_press" />
+
+                        <com.freshkeep.app.views.QuantityWheelView
+                            android:id="@+id/durationWheel"
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:layout_marginTop="10dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:background="@drawable/bg_section_lg"
+                            android:orientation="vertical"
+                            android:padding="18dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/Text.BodySm"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/add_today_date"
+                                    android:textColor="@color/color_text_secondary" />
+
+                                <TextView
+                                    android:id="@+id/todayDate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/nunito_semibold"
+                                    android:text="20 July 2026"
+                                    android:textColor="@color/color_text_primary"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/Text.BodySm"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/add_selected_duration"
+                                    android:textColor="@color/color_text_secondary" />
+
+                                <TextView
+                                    android:id="@+id/selectedDuration"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/nunito_semibold"
+                                    android:text="15 Days"
+                                    android:textColor="@color/color_text_primary"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/Text.BodySm"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/add_estimated_expiry"
+                                    android:textColor="@color/color_text_secondary" />
+
+                                <TextView
+                                    android:id="@+id/estimatedDate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/nunito_bold"
+                                    android:text="4 August 2026"
+                                    android:textColor="@color/color_primary_press"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:layout_weight="1"
+                                android:background="@color/color_divider" />
+
+                            <TextView
+                                style="@style/Text.Caption"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:text="@string/add_or"
+                                android:textColor="@color/color_text_tertiary" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:layout_weight="1"
+                                android:background="@color/color_divider" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:background="@drawable/bg_card_lg"
+                            android:elevation="2dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:padding="20dp">
+
+                            <TextView
+                                style="@style/Text.H3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/add_exact_date" />
+
+                            <TextView
+                                style="@style/Text.BodySm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:text="@string/add_exact_date_desc"
+                                android:textColor="@color/color_text_secondary" />
+
+                            <LinearLayout
+                                android:id="@+id/btnAddDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="64dp"
+                                android:layout_marginTop="12dp"
+                                android:background="@drawable/btn_secondary"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.freshkeep.app.views.IconView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="calendar_month"
+                                    android:textColor="@color/color_primary_press"
+                                    android:textSize="18dp" />
+
+                                <TextView
+                                    android:id="@+id/addDateLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:fontFamily="@font/baloo2_bold"
+                                    android:text="@string/add_add_date"
+                                    android:textColor="@color/color_primary_press"
+                                    android:textSize="17sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- date mode -->
+                    <LinearLayout
+                        android:id="@+id/dateSection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:background="@drawable/bg_primary_surface_lg"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="24dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/dateExpiresIn"
+                            style="@style/Text.BodyLg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Expires in 15 days" />
+
+                        <TextView
+                            android:id="@+id/btnUseDuration"
+                            style="@style/Text.Label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="14dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:padding="4dp"
+                            android:text="@string/add_use_duration"
+                            android:textColor="@color/color_primary_press" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/bottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnContinue"
+                style="@style/Btn.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:text="@string/action_continue" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- STEP 5: celebration -->
+    <LinearLayout
+        android:id="@+id/celebrationOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.freshkeep.app.views.CelebrationView
+            android:id="@+id/celebrationView"
+            android:layout_width="140dp"
+            android:layout_height="140dp" />
+
+        <TextView
+            android:id="@+id/celebrationTitle"
+            style="@style/Text.Display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="@string/add_food_added" />
+
+        <TextView
+            android:id="@+id/celebrationSub"
+            style="@style/Text.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
+            android:text="@string/add_remind_generic"
+            android:textColor="@color/color_text_secondary" />
+    </LinearLayout>
+</FrameLayout>

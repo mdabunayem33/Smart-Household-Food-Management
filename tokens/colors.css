@@ -1,0 +1,120 @@
+/* ============================================================
+   COLOR TOKENS — Smart Household Food Management System
+   Base palette as specified by brand, plus derived tints/shades
+   generated in oklch for smooth, perceptually-even ramps.
+   ============================================================ */
+
+:root {
+  /* ---- Brand base (given) ---- */
+  --green-500: #4CAF50;   /* Primary */
+  --green-50:  #E8F5E9;   /* Light Green surface */
+  --orange-500:#FFA726;
+  --red-500:   #EF5350;
+  --blue-500:  #42A5F5;
+
+  /* ---- Derived ramps (oklch, anchored to the base hues above) ---- */
+  --green-100: oklch(from var(--green-500) 0.93 0.045 h);
+  --green-200: oklch(from var(--green-500) 0.86 0.09 h);
+  --green-300: oklch(from var(--green-500) 0.76 0.12 h);
+  --green-400: oklch(from var(--green-500) 0.68 0.135 h);
+  --green-600: oklch(from var(--green-500) 0.52 0.135 h);
+  --green-700: oklch(from var(--green-500) 0.42 0.115 h);
+  --green-800: oklch(from var(--green-500) 0.32 0.09 h);
+
+  --orange-100: oklch(from var(--orange-500) 0.93 0.05 h);
+  --orange-600: oklch(from var(--orange-500) 0.62 0.16 h);
+  --orange-700: oklch(from var(--orange-500) 0.5 0.14 h);
+
+  --red-100: oklch(from var(--red-500) 0.92 0.045 h);
+  --red-600: oklch(from var(--red-500) 0.55 0.18 h);
+  --red-700: oklch(from var(--red-500) 0.45 0.16 h);
+
+  --blue-100: oklch(from var(--blue-500) 0.92 0.04 h);
+  --blue-600: oklch(from var(--blue-500) 0.55 0.15 h);
+  --blue-700: oklch(from var(--blue-500) 0.45 0.13 h);
+
+  /* ---- Neutrals ---- */
+  --white: #FFFFFF;
+  --gray-25:  #FAFBFA;
+  --gray-50:  #F5F7F6;   /* Very Light Gray Sections */
+  --gray-100: #EEF1EF;
+  --gray-200: #E2E6E3;
+  --gray-300: #C9D0CA;
+  --gray-400: #A2ACA4;
+  --gray-500: #78847C;
+  --gray-600: #576057;
+  --gray-700: #3D453F;
+  --gray-800: #262B27;
+  --gray-900: #14170F;
+
+  /* ---- Semantic aliases ---- */
+  --color-bg: var(--white);
+  --color-bg-section: var(--gray-50);
+  --color-bg-elevated: var(--white);
+
+  --color-text-primary: var(--gray-900);
+  --color-text-secondary: var(--gray-600);
+  --color-text-tertiary: var(--gray-400);
+  --color-text-inverse: var(--white);
+  --color-text-on-brand: var(--white);
+
+  --color-primary: var(--green-500);
+  --color-primary-hover: var(--green-600);
+  --color-primary-press: var(--green-700);
+  --color-primary-surface: var(--green-50);
+  --color-primary-surface-strong: var(--green-100);
+  --color-primary-border: var(--green-200);
+
+  --color-accent-orange: var(--orange-500);
+  --color-accent-orange-surface: var(--orange-100);
+  --color-accent-red: var(--red-500);
+  --color-accent-red-surface: var(--red-100);
+  --color-accent-blue: var(--blue-500);
+  --color-accent-blue-surface: var(--blue-100);
+
+  /* Freshness semantics — used across inventory freshness bars/badges */
+  --color-fresh: var(--green-500);
+  --color-fresh-surface: var(--green-50);
+  --color-aging: #FFD54F;
+  --color-aging-surface: #FFF8E1;
+  --color-soon: var(--orange-500);
+  --color-soon-surface: var(--orange-100);
+  --color-expired: var(--red-500);
+  --color-expired-surface: var(--red-100);
+
+  --color-success: var(--green-500);
+  --color-warning: var(--orange-500);
+  --color-danger: var(--red-500);
+  --color-info: var(--blue-500);
+
+  --color-border: var(--gray-200);
+  --color-border-strong: var(--gray-300);
+  --color-divider: var(--gray-100);
+
+  --color-overlay-scrim: oklch(0.15 0.02 150 / 0.45);
+  --color-focus-ring: var(--blue-500);
+}
+
+/* Dark mode — Profile screen exposes a Dark Mode toggle */
+[data-theme="dark"] {
+  --color-bg: #14170F;
+  --color-bg-section: #1B1F17;
+  --color-bg-elevated: #20251C;
+
+  --color-text-primary: #F2F5F0;
+  --color-text-secondary: #A7B3A9;
+  --color-text-tertiary: #6E7A70;
+
+  --color-primary-surface: oklch(from var(--green-500) 0.25 0.06 h);
+  --color-primary-surface-strong: oklch(from var(--green-500) 0.3 0.08 h);
+  --color-primary-border: oklch(from var(--green-500) 0.38 0.09 h);
+
+  --color-border: #2B322A;
+  --color-border-strong: #394236;
+  --color-divider: #232921;
+
+  --color-fresh-surface: oklch(from var(--green-500) 0.25 0.06 h);
+  --color-soon-surface: oklch(from var(--orange-500) 0.3 0.07 h);
+  --color-expired-surface: oklch(from var(--red-500) 0.28 0.07 h);
+  --color-aging-surface: oklch(0.32 0.06 95);
+}

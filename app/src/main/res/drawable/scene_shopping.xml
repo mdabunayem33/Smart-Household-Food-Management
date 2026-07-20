@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- OnboardingScene "shopping": family + cart + checklist card -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="220dp" android:height="220dp"
+    android:viewportWidth="220" android:viewportHeight="220">
+    <path android:pathData="M10,110 a100,100 0 1,0 200,0 a100,100 0 1,0 -200,0">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear"
+                android:startX="10" android:startY="10" android:endX="210" android:endY="210"
+                android:startColor="#E3F2FD" android:endColor="#BBDEFB" />
+        </aapt:attr>
+    </path>
+    <!-- adult (scale 0.85 at 52,130) -->
+    <path android:pathData="M43.5,130 a8.5,8.5 0 1,0 17,0 a8.5,8.5 0 1,0 -17,0" android:fillColor="#1E88E5" />
+    <path android:pathData="M40.1,164 C40.1,152.1 45.63,145.3 52,145.3 C58.38,145.3 63.9,152.1 63.9,164 Z" android:fillColor="#1E88E5" />
+    <!-- child (scale 0.55 at 78,140) -->
+    <path android:pathData="M72.5,140 a5.5,5.5 0 1,0 11,0 a5.5,5.5 0 1,0 -11,0" android:fillColor="#42A5F5" />
+    <path android:pathData="M70.3,162 C70.3,154.3 73.88,149.9 78,149.9 C82.13,149.9 85.7,154.3 85.7,162 Z" android:fillColor="#42A5F5" />
+    <!-- cart -->
+    <path android:pathData="M92,110h60l-8,34a6,6 0 0,1 -6,5h-32a6,6 0 0,1 -6,-5l-8,-34Z" android:fillColor="#64B5F6" />
+    <path android:pathData="M91,100 l60,0 a5,5 0 0,1 5,5 a5,5 0 0,1 -5,5 l-60,0 a5,5 0 0,1 -5,-5 a5,5 0 0,1 5,-5 Z" android:fillColor="#1E88E5" />
+    <path android:pathData="M100,156 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0" android:fillColor="#0D47A1" />
+    <path android:pathData="M134,156 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0" android:fillColor="#0D47A1" />
+    <!-- checklist card -->
+    <path android:pathData="M134,50 l38,0 a14,14 0 0,1 14,14 l0,32 a14,14 0 0,1 -14,14 l-38,0 a14,14 0 0,1 -14,-14 l0,-32 a14,14 0 0,1 14,-14 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear"
+                android:startX="120" android:startY="50" android:endX="186" android:endY="110"
+                android:startColor="#FFFFFF" android:endColor="#F2F8FF" />
+        </aapt:attr>
+    </path>
+    <path android:pathData="M134,62 l38,0 a4,4 0 0,1 4,4 a4,4 0 0,1 -4,4 l-38,0 a4,4 0 0,1 -4,-4 a4,4 0 0,1 4,-4 Z" android:fillColor="#42A5F5" />
+    <path android:pathData="M129,82 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0" android:fillColor="#4CAF50" />
+    <path android:pathData="M147,79 l26,0 a3,3 0 0,1 3,3 a3,3 0 0,1 -3,3 l-26,0 a3,3 0 0,1 -3,-3 a3,3 0 0,1 3,-3 Z" android:fillColor="#B0BEC5" />
+    <path android:pathData="M129,96 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0" android:fillColor="#4CAF50" />
+    <path android:pathData="M147,93 l18,0 a3,3 0 0,1 3,3 a3,3 0 0,1 -3,3 l-18,0 a3,3 0 0,1 -3,-3 a3,3 0 0,1 3,-3 Z" android:fillColor="#B0BEC5" />
+</vector>

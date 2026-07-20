@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base app theme -->
+    <style name="Theme.FreshKeep" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_press</item>
+        <item name="colorOnPrimary">@color/color_text_on_brand</item>
+        <item name="colorSecondary">@color/color_primary</item>
+        <item name="colorAccent">@color/color_primary</item>
+        <item name="android:colorBackground">@color/color_bg</item>
+        <item name="android:windowBackground">@color/color_bg</item>
+        <item name="android:statusBarColor">@color/color_bg</item>
+        <item name="android:windowLightStatusBar">@bool/light_status_bar</item>
+        <item name="android:navigationBarColor">@color/color_bg</item>
+        <item name="android:textColorPrimary">@color/color_text_primary</item>
+        <item name="android:textColorSecondary">@color/color_text_secondary</item>
+        <item name="android:fontFamily">@font/nunito_medium</item>
+        <item name="fontFamily">@font/nunito_medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="bottomSheetDialogTheme">@style/Theme.FreshKeep.BottomSheetDialog</item>
+    </style>
+
+    <!-- Splash: white window, logo drawn by the activity (animated) -->
+    <style name="Theme.FreshKeep.Splash" parent="Theme.FreshKeep">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:navigationBarColor">@color/white</item>
+    </style>
+
+    <!-- Bottom sheets: 32dp top corners, matching radius-xl sheet style -->
+    <style name="Theme.FreshKeep.BottomSheetDialog" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.FreshKeep.BottomSheet</item>
+        <item name="android:backgroundDimAmount">0.45</item>
+    </style>
+
+    <style name="Widget.FreshKeep.BottomSheet" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="backgroundTint">@color/color_bg</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.FreshKeep.BottomSheet</item>
+    </style>
+
+    <style name="ShapeAppearance.FreshKeep.BottomSheet" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/radius_xl</item>
+        <item name="cornerSizeTopRight">@dimen/radius_xl</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+    <!-- Full-screen overlay dialogs (Add Food wizard sub-sheets etc.) -->
+    <style name="Theme.FreshKeep.FullScreenDialog" parent="Theme.FreshKeep">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+</resources>

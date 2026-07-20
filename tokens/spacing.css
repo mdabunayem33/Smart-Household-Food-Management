@@ -1,0 +1,39 @@
+/* ============================================================
+   SPACING, RADIUS, SIZE TOKENS
+   8px base grid. Generous spacing per brief ("Beautiful Spacing").
+   Radii lean large & soft ("Rounded Cards").
+   Touch targets never below 48px (accessible for kids & elderly).
+   ============================================================ */
+
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 48px;
+  --space-10: 64px;
+  --space-11: 80px;
+
+  --screen-margin: 24px;
+
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+
+  --touch-target-min: 48px;
+  --touch-target-lg: 64px;
+
+  --icon-sm: 20px;
+  --icon-md: 24px;
+  --icon-lg: 32px;
+  --icon-xl: 48px;
+
+  --nav-bar-height: 72px;
+  --fab-size: 64px;
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Profile row — icon, label, optional value, chevron -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_bg_elevated"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="16dp"
+    android:paddingTop="14dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="14dp">
+
+    <com.freshkeep.app.views.IconView
+        android:id="@+id/rowIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="language"
+        android:textColor="@color/color_text_secondary"
+        android:textSize="22dp" />
+
+    <TextView
+        android:id="@+id/rowLabel"
+        style="@style/Text.BodyLg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_weight="1"
+        android:text="Language" />
+
+    <TextView
+        android:id="@+id/rowValue"
+        style="@style/Text.BodySm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="English"
+        android:textColor="@color/color_text_tertiary"
+        android:visibility="gone" />
+
+    <com.freshkeep.app.views.IconView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="chevron_right"
+        android:textColor="@color/color_text_tertiary"
+        android:textSize="18dp" />
+</LinearLayout>

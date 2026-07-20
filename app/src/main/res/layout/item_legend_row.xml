@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dashboard legend row — dot, icon, label, count, pct -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <View
+        android:id="@+id/legendDot"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:background="@drawable/circle_primary" />
+
+    <com.freshkeep.app.views.IconView
+        android:id="@+id/legendIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="nutrition"
+        android:textColor="@color/color_text_secondary"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/legendLabel"
+        style="@style/Text.Body"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:text="Fresh Food" />
+
+    <TextView
+        android:id="@+id/legendCount"
+        style="@style/Text.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18 items"
+        android:textColor="@color/color_text_tertiary" />
+
+    <TextView
+        android:id="@+id/legendPct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/baloo2_bold"
+        android:gravity="end"
+        android:minWidth="36dp"
+        android:text="45%"
+        android:textColor="@color/color_text_primary"
+        android:textSize="13sp" />
+</LinearLayout>

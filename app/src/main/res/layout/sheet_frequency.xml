@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Shopping frequency bottom sheet (Shopping.jsx freqSheetOpen) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        style="@style/Text.H3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shopping frequency" />
+
+    <TextView
+        android:id="@+id/freqWeekly"
+        style="@style/Text.BodyLg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_option_card"
+        android:minHeight="48dp"
+        android:padding="16dp"
+        android:text="Weekly" />
+
+    <TextView
+        android:id="@+id/freqBiweekly"
+        style="@style/Text.BodyLg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_option_card"
+        android:minHeight="48dp"
+        android:padding="16dp"
+        android:text="Every 15 Days" />
+
+    <TextView
+        android:id="@+id/freqMonthly"
+        style="@style/Text.BodyLg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_option_card"
+        android:minHeight="48dp"
+        android:padding="16dp"
+        android:text="Monthly" />
+</LinearLayout>

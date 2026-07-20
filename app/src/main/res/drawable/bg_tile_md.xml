@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 18dp-radius icon tile; tone color set at runtime via mutate().setColor() -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/color_primary_surface" />
+    <corners android:radius="@dimen/radius_md" />
+</shape>

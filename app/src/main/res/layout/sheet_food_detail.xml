@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FoodDetail.jsx — bottom sheet: handle, tile + name/qty + close,
+     freshness bar, Consume / Adjust / Discard -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/dot_inactive" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/detailTile"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/bg_primary_surface_lg">
+
+            <ImageView
+                android:id="@+id/detailIllustration"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:importantForAccessibility="no"
+                android:padding="10dp"
+                android:src="@drawable/ill_others" />
+
+            <com.freshkeep.app.views.IconView
+                android:id="@+id/detailIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="category"
+                android:textColor="@color/color_primary_press"
+                android:textSize="32dp"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/detailName"
+                style="@style/Text.H1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tomato" />
+
+            <TextView
+                android:id="@+id/detailQty"
+                style="@style/Text.Body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6 pcs"
+                android:textColor="@color/color_text_secondary" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/btnClose"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/circle_section"
+            android:clickable="true"
+            android:focusable="true">
+
+            <com.freshkeep.app.views.IconView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="close"
+                android:textColor="@color/color_text_primary"
+                android:textSize="24dp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <com.freshkeep.app.views.FreshnessBarView
+        android:id="@+id/detailBar"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/detailExpiryLabel"
+        style="@style/Text.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Expires in 2 days"
+        android:textColor="@color/color_text_tertiary" />
+
+    <!-- Action area: Material 3 filled buttons. These MUST be MaterialButton with
+         app:backgroundTint — a plain <Button> is auto-inflated as MaterialButton
+         under the Material3 theme, which ignores android:background and renders
+         with its default (grey) container. -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnConsume"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:elevation="8dp"
+        android:enabled="true"
+        android:fontFamily="@font/nunito_semibold"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:stateListAnimator="@null"
+        android:text="Mark as Consumed"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:backgroundTint="@color/btn_consume_tint"
+        app:cornerRadius="30dp"
+        app:elevation="8dp"
+        app:rippleColor="#33FFFFFF" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAdjust"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="12dp"
+        android:elevation="6dp"
+        android:enabled="true"
+        android:fontFamily="@font/nunito_semibold"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:stateListAnimator="@null"
+        android:text="Adjust Quantity"
+        android:textColor="#1B5E20"
+        android:textSize="18sp"
+        app:backgroundTint="@color/btn_adjust_tint"
+        app:cornerRadius="30dp"
+        app:elevation="6dp"
+        app:rippleColor="#331B5E20" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDiscard"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="12dp"
+        android:elevation="8dp"
+        android:enabled="true"
+        android:fontFamily="@font/nunito_semibold"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:stateListAnimator="@null"
+        android:text="Discard"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:backgroundTint="@color/btn_discard_tint"
+        app:cornerRadius="30dp"
+        app:elevation="8dp"
+        app:rippleColor="#33FFFFFF" />
+</LinearLayout>

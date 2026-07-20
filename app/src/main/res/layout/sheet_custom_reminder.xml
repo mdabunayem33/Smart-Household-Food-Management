@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- CustomReminderSheet — handle, title, value, horizontal wheel, actions -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/dot_inactive" />
+
+    <TextView
+        style="@style/Text.H3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Custom Reminder" />
+
+    <TextView
+        android:id="@+id/customValue"
+        style="@style/Text.H2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="1 Day Before"
+        android:textColor="@color/color_primary_press" />
+
+    <com.freshkeep.app.views.QuantityWheelView
+        android:id="@+id/customWheel"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancel"
+            style="@style/Btn.Ghost"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:text="Cancel" />
+
+        <Button
+            android:id="@+id/btnSaveReminder"
+            style="@style/Btn.Primary"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:text="Save Reminder" />
+    </LinearLayout>
+</LinearLayout>
