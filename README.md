@@ -502,8 +502,8 @@ Everything below is transcribed 1:1 from `tokens/` into `res/values`:
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/FreshKeep.git
-   cd FreshKeep
+   git clone https://github.com/mdabunayem33/Smart-Household-Food-Management.git
+   cd Smart-Household-Food-Management
    ```
 2. Open in Android Studio: **File → Open →** select the project root.
 3. Let Gradle sync finish.
